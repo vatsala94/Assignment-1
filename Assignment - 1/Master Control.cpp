@@ -15,7 +15,7 @@ void MasterControl::printWelcomeMsg() {
 	cout << endl << MESSAGE_WELCOME << endl << endl;
 }
 
-
+//While reading the text file, it checks if the file empty or the name is incorrect. If so, it asks for user input again.
 void MasterControl::getMoviesFile() {
 	cout << MESSAGE_INPUT_MOVIES << endl;
 	getline(cin, movieFileName);
@@ -28,6 +28,7 @@ void MasterControl::getMoviesFile() {
 	}
 }
 
+//While reading the text file, it checks if the file empty or the name is incorrect. If so, it asks for user input again.
 void MasterControl::getKeywordsFile() {
 	cout << endl << endl << MESSAGE_INPUT_KeyWordsToIgnore << endl;
 	getline(cin, keywordsFileName);

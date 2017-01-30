@@ -7,6 +7,7 @@ using namespace std;
 
 vector <string> Alphabetizer::sortedLines;
 
+//Accesses the circular shifted lines from class CircularShifter. Sorts the circularly shifted lines alphabetically (A->Z).
 void Alphabetizer::sortMovies(CircularShifter shiftedLines) {
 	sortedLines = convertToUpper(shiftedLines.getShiftedLines());
 	string line;

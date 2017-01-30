@@ -4,6 +4,7 @@
 
 using namespace std;
 
+//Reads the words to ignore that are stored in the file and sends them to Line Storage to store. If the file is unable to open(incorrect file name or the file is empty), it sends a false message to the Master Control. The master control then handles this exception.
 bool Input::readKeywordsToIgnore(string keywordsFileName, LineStorage L1) {
 	ifstream File1(keywordsFileName);
 	string keywords;
@@ -22,6 +23,7 @@ bool Input::readKeywordsToIgnore(string keywordsFileName, LineStorage L1) {
 	File1.close();
 }
 
+//Reads the movies that are stored in the file and sends them to Line Storage to store. If the file is unable to open(incorrect file name or the file is empty), it sends a false message to the Master Control. The master control then handles this exception.
 bool Input::readMovies(string fileName, LineStorage L1) {
 	ifstream myFile(fileName);
 	string line;

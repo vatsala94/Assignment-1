@@ -7,6 +7,7 @@ using namespace std;
 
 vector <string> CircularShifter::shiftedLines;
 
+//Reads the movies from the Line Storage, and circularly shifts each line. 
 void CircularShifter::setup(LineStorage lines) {
 	int size = lines.numberOfMovies();
 	int index;
@@ -18,6 +19,7 @@ void CircularShifter::setup(LineStorage lines) {
 	}
 }
 
+//Performs circular shift of a line
 void CircularShifter::circularShift(string line, LineStorage L1) {
 	vector <string> wordsOfMovie;
 	string rotatedMovie;
@@ -34,6 +36,7 @@ void CircularShifter::circularShift(string line, LineStorage L1) {
 	}
 }
 
+//Checks if the first word in each circularly shifted line is a word to ignore. If so, it removes that line from the circularly shifted lines.
 bool CircularShifter::checkIfKeyword(vector <string> line, LineStorage L1) {
 	int size = L1.numberOfKeywords();
 	string keyword;
@@ -46,6 +49,7 @@ bool CircularShifter::checkIfKeyword(vector <string> line, LineStorage L1) {
 	return true;
 }
 
+//To break up each line into its respective words. Used for circular shifting.
 vector <string> CircularShifter::stringToWords(string line) {
 	int startIndex = 0;
 	int endIndex = 0;

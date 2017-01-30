@@ -6,6 +6,7 @@
 
 using namespace std;
 
+//Prints the movies on the CMD window 
 void Output::printMovies(Alphabetizer A1) {
 	vector <string> sortedLines = A1.getSortedLines();
 	cout << endl << "The output is: " << endl;
@@ -16,6 +17,7 @@ void Output::printMovies(Alphabetizer A1) {
 	cout << "**************************************************" << endl << endl;
 }
 
+//Stores the output in a text file by the name of "Output.txt"
 void Output::storeOutputinFile(Alphabetizer A1) {
 	string fileName = "Output.txt";
 	vector <string> sortedLines = A1.getSortedLines();
