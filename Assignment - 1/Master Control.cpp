@@ -8,6 +8,7 @@ const string MasterControl::MESSAGE_INPUT_MOVIES = "Enter name of the text file 
 const string MasterControl::MESSAGE_INPUT_KeyWordsToIgnore = "Enter name of the text file containing the keywords to ignore (FileName.txt): ";
 const string MasterControl::MESSAGE_ERROR_INPUT = "Incorrect file name. Please enter the file name again. ";
 const string MasterControl::MESSAGE_BYE = "The solution is stored in 'Output.txt'.\n\nGoodbye!\n\n";
+const string MESSAGE_SUCCESS = "File has been successfully opened";
 string MasterControl::movieFileName;
 string MasterControl::keywordsFileName;
 
@@ -26,6 +27,7 @@ void MasterControl::getMoviesFile() {
 		getline(cin, movieFileName);
 		validMovies = input.readMovies(movieFileName, movies);
 	}
+	cout << endl << MESSAGE_SUCCESS << endl;
 }
 
 //While reading the text file, it checks if the file empty or the name is incorrect. If so, it asks for user input again.
@@ -38,6 +40,7 @@ void MasterControl::getKeywordsFile() {
 		getline(cin, keywordsFileName);
 		validKeywords = input.readKeywordsToIgnore(keywordsFileName, movies);
 	}
+	cout << endl << MESSAGE_SUCCESS << endl;
 }
 
 void MasterControl::doCircularShift() {
